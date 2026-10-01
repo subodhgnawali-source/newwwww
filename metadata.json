@@ -1,0 +1,6 @@
+{
+  "name": "FrostArc",
+  "description": "FrostArc: 60-Day Student Transformation Web App. High-discipline winter arc command center for Class 11/12 students with daily routine, focus timer, workout splits, interest penalty, shields, and streak engines.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

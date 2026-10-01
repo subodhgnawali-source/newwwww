@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1626" />
+      <stop offset="100%" stop-color="#070B14" />
+    </linearGradient>
+    <linearGradient id="frostGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A2E2FF" />
+      <stop offset="50%" stop-color="#7CC8FF" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7CC8FF" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <!-- Background with safe padding for maskable icons -->
+  <rect width="512" height="512" rx="104" fill="url(#bgGrad)" />
+  <circle cx="256" cy="256" r="180" fill="url(#glowGrad)" />
+  
+  <!-- Outer Frost Arc -->
+  <path d="M 120 330 A 160 160 0 1 1 392 330" fill="none" stroke="url(#frostGrad)" stroke-width="26" stroke-linecap="round" />
+  
+  <!-- Inner Ice Facet Star / Diamond -->
+  <path d="M 256 140 L 290 220 L 370 256 L 290 292 L 256 372 L 222 292 L 142 256 L 222 220 Z" fill="url(#frostGrad)" opacity="0.95" />
+  <circle cx="256" cy="256" r="18" fill="#FFFFFF" />
+  
+  <!-- Subtle arc marks -->
+  <circle cx="120" cy="330" r="10" fill="#7CC8FF" />
+  <circle cx="392" cy="330" r="10" fill="#7CC8FF" />
+</svg>

@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #070B14;
+    --surface-glass: rgba(255, 255, 255, 0.05);
+    --surface-glass-hover: rgba(255, 255, 255, 0.08);
+    --surface-glass-active: rgba(255, 255, 255, 0.12);
+    --border-frost: rgba(160, 210, 255, 0.14);
+    --border-frost-bright: rgba(160, 210, 255, 0.35);
+    --frost-blue-from: #7CC8FF;
+    --frost-blue-to: #4A9DFF;
+    --ice-white: #EAF4FF;
+    --ice-muted: #8FA3BF;
+    --frost-success: #5EE6B8;
+    --frost-warning: #FFC857;
+    --frost-danger: #FF6B7A;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--ice-white);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Glass card styling */
+.frost-card {
+  background: var(--surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-frost);
+  border-radius: 1rem;
+}
+
+.frost-card-interactive {
+  background: var(--surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-frost);
+  border-radius: 1rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.frost-card-interactive:hover {
+  background: var(--surface-glass-hover);
+  border-color: var(--border-frost-bright);
+}
+
+/* Frost glow */
+.frost-glow {
+  box-shadow: 0 0 24px -4px rgba(124, 200, 255, 0.25);
+}
+
+.frost-glow-lg {
+  box-shadow: 0 0 40px -4px rgba(124, 200, 255, 0.4);
+}
+
+/* Tabular figures for timers */
+.font-tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(160, 210, 255, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(160, 210, 255, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
